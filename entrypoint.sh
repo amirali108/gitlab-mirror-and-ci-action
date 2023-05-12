@@ -35,6 +35,7 @@ if [ "${FORCE_PUSH:-}" = "true" ]
 then
   sh -c "git push --force mirror $branch"
 else
+  sh -c "git pull origin $branch"
   sh -c "git push mirror $branch"
 fi
 
